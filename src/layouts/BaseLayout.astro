@@ -53,7 +53,7 @@ const cssPath = `${baseUrl}/styles/global.css`;
   <body>
     <header class="site-header">
       <div class="container">
-        <a href="/" class="logo">
+        <a href={baseUrl} class="logo">
           <svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg"
                width="36" height="36" style="flex-shrink:0" aria-hidden="true">
             <rect width="42" height="42" rx="9" fill="#15293F"/>
@@ -72,10 +72,10 @@ const cssPath = `${baseUrl}/styles/global.css`;
           </div>
         </a>
         <nav class="main-nav">
-          <a href="/chi-sono">Chi sono</a>
-          <a href="/patologie/anca">Patologie dell'anca</a>
-          <a href="/patologie/ginocchio">Patologie del ginocchio</a>
-          <a href="/prenota" class="nav-cta">Prenota una visita</a>
+          <a href={`${baseUrl}/chi-sono`}>Chi sono</a>
+          <a href={`${baseUrl}/patologie/anca`}>Patologie dell'anca</a>
+          <a href={`${baseUrl}/patologie/ginocchio`}>Patologie del ginocchio</a>
+          <a href={`${baseUrl}/prenota`} class="nav-cta">Prenota una visita</a>
         </nav>
       </div>
     </header>
@@ -97,11 +97,11 @@ const cssPath = `${baseUrl}/styles/global.css`;
           </div>
           <div>
             <p class="footer-label">Contatti</p>
-            <a href="/prenota">Prenota una visita</a>
+            <a href={`${baseUrl}/prenota`}>Prenota una visita</a>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Dott. Fabrizio Rivera · <a href="/privacy-policy">Privacy policy</a></p>
+          <p>&copy; {new Date().getFullYear()} Dott. Fabrizio Rivera · <a href={`${baseUrl}/privacy-policy`}>Privacy policy</a></p>
         </div>
       </div>
     </footer>
