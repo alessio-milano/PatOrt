@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Chi sono"
+  description="Fabrizio Rivera, Direttore S.C. Ortopedia e Traumatologia, Ospedale Cottolengo Torino. 25+ anni di esperienza clinica, 100+ pubblicazioni scientifiche."
+>
+
+  <!-- HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <p class="article-eyebrow">Chi sono</p>
+      <h1>Dott. Fabrizio Rivera</h1>
+      <p class="lead">
+        Direttore della S.C. Ortopedia e Traumatologia presso il Presidio Sanitario Ospedale Cottolengo di Torino. Specializzato in chirurgia protesica e artroscopica dell'anca e del ginocchio.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start;">
+
+        <!-- BIO -->
+        <div class="article-content">
+
+          <img src="/img/2020/12/FotoRivera2.jpg" alt="Dott. Fabrizio Rivera — Ortopedico Torino" style="max-width: 280px; border-radius: 4px; margin-bottom: 2rem;" />
+
+          <h2>Formazione</h2>
+          <p>
+            Laureato con lode in Medicina e Chirurgia presso l'Università degli Studi di Torino (sede di Novara) nel 1997, con tesi sul trattamento delle lesioni del legamento crociato posteriore. Specializzato con lode in Ortopedia e Traumatologia presso l'Università degli Studi di Siena nel 2003.
+          </p>
+
+          <h2>Percorso professionale</h2>
+          <p>
+            Dal 2003 al 2011 Dirigente Medico presso la S.C. Ortopedia e Traumatologia del Presidio Sanitario Gradenigo di Torino. Dal 2011 Dirigente Medico e dal 2015 Direttore della S.C. Ortopedia e Traumatologia degli Ospedali SS. Annunziata di Savigliano e Ospedale Civile di Saluzzo (ASL CN1).
+          </p>
+          <p>
+            Dal <strong>1° giugno 2026</strong>, Direttore della S.C. Ortopedia e Traumatologia presso il <strong>Presidio Sanitario Ospedale Cottolengo di Torino</strong> — struttura premiata tra gli "Ospedali di Eccellenza" per l'ortopedia, dotata di sistema robotico ROSA Knee per la chirurgia protesica del ginocchio.
+          </p>
+          <p>
+            Nel corso della carriera si è dedicato in particolare alla ricerca e al trattamento chirurgico protesico, ricostruttivo e artroscopico di patologie dell'anca e del ginocchio, con specifica expertise nella chirurgia di revisione e nell'approccio anteriore mininvasivo all'anca.
+          </p>
+
+          <h2>Attività scientifica</h2>
+          <p>
+            Associate Editor del <em>Journal of Orthopaedics and Traumatology</em>, membro del Consiglio Direttivo del Club Italiano Osteosintesi, International Member dell'AAOS (American Academy of Orthopaedic Surgeons), membro di SIOT, AIR e SIdA.
+          </p>
+          <p>
+            Autore di oltre 100 pubblicazioni scientifiche su riviste internazionali con impact factor. Relatore a numerosi congressi nazionali e internazionali.
+          </p>
+
+          <!-- NOTA: questa pagina sarà aggiornata da Fabrizio con contenuto più recente -->
+          <!-- La lista completa delle pubblicazioni va estratta e aggiornata -->
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <div>
+          <div style="background: var(--paper); border: 1px solid var(--border); border-radius: 8px; padding: 1.8rem; position: sticky; top: 6rem;">
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); font-weight: 600; margin-bottom: 1rem;">Dove ricevo</p>
+            <p style="font-weight: 600; color: var(--ink); margin-bottom: 0.3rem;">Ospedale Cottolengo</p>
+            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.5rem;">Torino</p>
+            <a href="/prenota" class="btn-primary" style="display: block; text-align: center;">Prenota una visita</a>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 1.5rem 0;" />
+
+            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); font-weight: 600; margin-bottom: 1rem;">Memberships</p>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+              {['AAOS International Member', 'SIOT', 'AIR', 'SIdA', 'Club Italiano Osteosintesi'].map(b => (
+                <span style="font-size: 0.82rem; color: var(--ink);">· {b}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

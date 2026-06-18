@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    { "source": "/gli-autori/", "destination": "/chi-sono", "permanent": true },
+    { "source": "/gli-autori", "destination": "/chi-sono", "permanent": true },
+    { "source": "/prenota-una-visita/", "destination": "/prenota", "permanent": true },
+    { "source": "/prenota-una-visita", "destination": "/prenota", "permanent": true },
+    { "source": "/la-protesi-danca/", "destination": "/patologie/la-protesi-danca", "permanent": true },
+    { "source": "/il-conflitto-femoro-acetabolare/", "destination": "/patologie/il-conflitto-femoro-acetabolare", "permanent": true },
+    { "source": "/la-gonartrosi/", "destination": "/patologie/la-gonartrosi", "permanent": true },
+    { "source": "/la-coxartrosi/", "destination": "/patologie/la-coxartrosi", "permanent": true },
+    { "source": "/la-displasia-2/", "destination": "/patologie/la-displasia-dellanca", "permanent": true },
+    { "source": "/la-necrosi-avascolare-della-testa-del-femore/", "destination": "/patologie/la-necrosi-avascolare", "permanent": true },
+    { "source": "/la-viscosupplementazione/", "destination": "/patologie/la-viscosupplementazione", "permanent": true },
+    { "source": "/la-protesi-di-ginocchio/", "destination": "/patologie/la-protesi-di-ginocchio", "permanent": true },
+    { "source": "/le-lesioni-meniscali/", "destination": "/patologie/le-lesioni-meniscali", "permanent": true },
+    { "source": "/la-lesione-del-legamento-crociato-anteriore/", "destination": "/patologie/la-lesione-del-legamento-crociato-anteriore", "permanent": true },
+    { "source": "/ginocchio-generalita/", "destination": "/patologie/il-ginocchio", "permanent": true },
+    { "source": "/anca-generalita/", "destination": "/patologie/lanca", "permanent": true }
+  ]
+}

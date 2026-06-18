@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const tutteLePatologie = await getCollection('patologie');
+const patologieAnca = tutteLePatologie.filter(p => p.data.categoria === 'anca');
+const patologieGinocchio = tutteLePatologie.filter(p => p.data.categoria === 'ginocchio');
+
+const excerpts: Record<string, string> = {
+  'la-protesi-danca': "La protesi d'anca è la soluzione chirurgica per la degenerazione avanzata dell'articolazione, con risultati eccellenti in termini di mobilità e qualità della vita.",
+  'il-conflitto-femoro-acetabolare': "Una patologia di recente definizione, riconosciuta come causa di artrosi precoce nei pazienti giovani, trattabile anche in artroscopia.",
+  'la-gonartrosi': "L'artrosi del ginocchio colpisce milioni di persone. Esistono oggi trattamenti efficaci per ogni stadio della malattia, dalla terapia conservativa alla protesi.",
+};
+---
+<BaseLayout title="Specialista in Ortopedia e Traumatologia">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <p class="hero-eyebrow">Ortopedia e Traumatologia · Torino</p>
+          <h1>Dott. Fabrizio Rivera</h1>
+          <div class="hero-credential">
+            <p>
+              <strong>Direttore S.C. Ortopedia e Traumatologia</strong><br/>
+              Presidio Sanitario Ospedale Cottolengo · Torino<br/>
+              Specialista in chirurgia protesica di anca e ginocchio
+            </p>
+          </div>
+          <div class="hero-cta-group">
+            <a href="/prenota" class="btn-primary">Prenota una visita</a>
+            <a href="/chi-sono" class="btn-secondary">Chi sono</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-stats-grid">
+            <div class="hero-stat">
+              <div class="hero-stat-number">25+</div>
+              <div class="hero-stat-label">anni di esperienza clinica</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">100+</div>
+              <div class="hero-stat-label">pubblicazioni scientifiche</div>
+            </div>
+          </div>
+          <div class="hero-quote">
+            <p>«La sua intensa attività editoriale, congressistica e il suo profilo accademico contribuiranno a garantire un ruolo sempre più centrale all'Ospedale Cottolengo nel panorama sanitario regionale.»</p>
+            <cite>Avv. Gian Paolo Zanetta — Direttore Generale, Ospedale Cottolengo</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATOLOGIE DELL'ANCA -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Patologie dell'anca</h2>
+        <a href="/patologie/anca" class="section-link">Tutte le patologie →</a>
+      </div>
+      <div class="patologie-grid">
+        {patologieAnca.map(p => (
+          <a href={`/patologie/${p.slug}`} class="patologia-card">
+            <span class="card-categoria">Anca</span>
+            <h3 class="card-title">{p.data.title}</h3>
+            <p class="card-excerpt">{excerpts[p.slug] ?? p.data.description}</p>
+            <span class="card-arrow">Approfondisci →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PATOLOGIE DEL GINOCCHIO -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Patologie del ginocchio</h2>
+        <a href="/patologie/ginocchio" class="section-link">Tutte le patologie →</a>
+      </div>
+      <div class="patologie-grid">
+        {patologieGinocchio.map(p => (
+          <a href={`/patologie/${p.slug}`} class="patologia-card">
+            <span class="card-categoria">Ginocchio</span>
+            <h3 class="card-title">{p.data.title}</h3>
+            <p class="card-excerpt">{excerpts[p.slug] ?? p.data.description}</p>
+            <span class="card-arrow">Approfondisci →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SONO STRIP -->
+  <section class="chi-sono-strip">
+    <div class="container">
+      <div class="chi-sono-inner">
+        <div>
+          <h2>Un percorso fondato su ricerca e pratica clinica</h2>
+          <p>
+            Laureato con lode all'Università di Torino e specializzato con lode a Siena, ho dedicato oltre 25 anni alla chirurgia ortopedica con una costante attenzione alla ricerca scientifica. Associate Editor del <em>Journal of Orthopaedics and Traumatology</em>, International Member dell'AAOS, autore di oltre 100 pubblicazioni su riviste internazionali.
+          </p>
+          <a href="/chi-sono" class="btn-primary">Leggi il curriculum completo</a>
+        </div>
+        <div class="badges">
+          <span class="badge">AAOS International Member</span>
+          <span class="badge">Journal of Orthopaedics — Associate Editor</span>
+          <span class="badge">SIOT</span>
+          <span class="badge">AIR</span>
+          <span class="badge">Club Italiano Osteosintesi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

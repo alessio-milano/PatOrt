@@ -1,0 +1,105 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia e Traumatologia. Direttore S.C. Ortopedia, Ospedale Cottolengo, Torino." } = Astro.props;
+---
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Dott. Fabrizio Rivera — Ortopedia Torino</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 42 42' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='42' height='42' rx='9' fill='%2315293F'/%3E%3Cpath d='M 9 26 A 13 13 0 0 1 32.6 15.2' transform='rotate(-20 24 15.2)' fill='none' stroke='%232A7A6F' stroke-width='3.6' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='15.2' r='5.2' fill='%23FFFFFF'/%3E%3Cpath d='M20.4 19.2C19.4 23.6 17.9 28 15.9 32.2C15.4 33.3 17.5 34 18.2 32.9C20.9 28.6 23.6 24 25.8 19.9C24.1 18.5 21.9 18.2 20.4 19.2Z' fill='%23FFFFFF'/%3E%3C/svg%3E" />
+    <!-- Schema.org Physician markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Fabrizio Rivera",
+      "url": "https://www.patologieortopediche.com",
+      "jobTitle": "Direttore S.C. Ortopedia e Traumatologia",
+      "worksFor": {
+        "@type": "Hospital",
+        "name": "Presidio Sanitario Ospedale Cottolengo",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Torino",
+          "addressCountry": "IT"
+        }
+      },
+      "medicalSpecialty": "Orthopedic Surgery",
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Università degli Studi di Torino" },
+        { "@type": "CollegeOrUniversity", "name": "Università degli Studi di Siena" }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/fabrizio-rivera-a918ab45",
+        "https://www.ospedalecottolengo.it"
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="logo">
+          <svg viewBox="0 0 42 42" xmlns="http://www.w3.org/2000/svg"
+               width="36" height="36" style="flex-shrink:0" aria-hidden="true">
+            <rect width="42" height="42" rx="9" fill="#15293F"/>
+            <path d="M 9 26 A 13 13 0 0 1 32.6 15.2"
+                  transform="rotate(-20 24 15.2)"
+                  fill="none" stroke="#2A7A6F"
+                  stroke-width="3.6" stroke-linecap="round"/>
+            <circle cx="24" cy="15.2" r="5.2" fill="#FFFFFF"/>
+            <path d="M20.4 19.2C19.4 23.6 17.9 28 15.9 32.2C15.4 33.3
+                     17.5 34 18.2 32.9C20.9 28.6 23.6 24 25.8 19.9
+                     C24.1 18.5 21.9 18.2 20.4 19.2Z" fill="#FFFFFF"/>
+          </svg>
+          <div>
+            <span class="logo-name">Dott. Fabrizio Rivera</span>
+            <span class="logo-role">Ortopedia e Traumatologia · Torino</span>
+          </div>
+        </a>
+        <nav class="main-nav">
+          <a href="/chi-sono">Chi sono</a>
+          <a href="/patologie/anca">Patologie dell'anca</a>
+          <a href="/patologie/ginocchio">Patologie del ginocchio</a>
+          <a href="/prenota" class="nav-cta">Prenota una visita</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-name">Dott. Fabrizio Rivera</p>
+            <p class="footer-role">Direttore S.C. Ortopedia e Traumatologia<br/>Presidio Sanitario Ospedale Cottolengo · Torino</p>
+          </div>
+          <div>
+            <p class="footer-label">Dove ricevo</p>
+            <p>Ospedale Cottolengo, Torino</p>
+          </div>
+          <div>
+            <p class="footer-label">Contatti</p>
+            <a href="/prenota">Prenota una visita</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Dott. Fabrizio Rivera · <a href="/privacy-policy">Privacy policy</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
