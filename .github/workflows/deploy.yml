@@ -28,6 +28,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: List dist directory
+        run: ls -la dist/
+
+      - name: Check index.html
+        run: head -c 500 dist/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
