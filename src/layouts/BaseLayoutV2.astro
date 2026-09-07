@@ -50,7 +50,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
       .v2-eyebrow {
         text-transform: uppercase;
         letter-spacing: 0.12em;
-        color: #3ECFBF;
+        color: #E07840;
         font-size: 0.75rem;
         font-weight: 600;
         margin-bottom: 1.1rem;
@@ -66,7 +66,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
       }
 
       .v2-credential {
-        border-left: 3px solid #2A7A6F;
+        border-left: 3px solid #D4622E;
         padding-left: 1.2rem;
         margin-bottom: 2.2rem;
       }
@@ -104,14 +104,14 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
       }
 
       .v2-btn-primary {
-        background: #3ECFBF;
-        color: #0a1628;
-        border: 1px solid #3ECFBF;
+        background: #E07840;
+        color: #FFFFFF;
+        border: 1px solid #E07840;
       }
 
       .v2-btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 24px rgba(62, 207, 191, 0.25);
+        box-shadow: 0 10px 24px rgba(224, 120, 64, 0.25);
       }
 
       .v2-btn-secondary {
@@ -126,7 +126,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
 
       .v2-quote {
         background: rgba(255, 255, 255, 0.05);
-        border-left: 3px solid #3ECFBF;
+        border-left: 3px solid #E07840;
         border-radius: 0 4px 4px 0;
         padding: 1.2rem 1.5rem;
       }
@@ -146,7 +146,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
         text-transform: uppercase;
         letter-spacing: 0.08em;
         font-size: 0.7rem;
-        color: #3ECFBF;
+        color: #E07840;
         font-weight: 600;
       }
 
@@ -163,9 +163,9 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
       }
 
       .v2-stats-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: clamp(3rem, 8vw, 6rem);
         text-align: center;
       }
 
@@ -173,7 +173,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
         font-family: 'Playfair Display', Georgia, serif;
         font-size: 3.5rem;
         font-weight: 700;
-        background: linear-gradient(135deg, #2A7A6F, #3ECFBF);
+        background: linear-gradient(135deg, #D4622E, #E07840);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -215,7 +215,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
       .v2-divider {
         width: 48px;
         height: 3px;
-        background: #2A7A6F;
+        background: #D4622E;
         margin-top: 0.8rem;
         margin-bottom: 2rem;
         border-radius: 2px;
@@ -247,7 +247,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
       .v2-card:hover {
         transform: translateY(-3px);
         box-shadow: 0 8px 24px rgba(21, 41, 63, 0.1);
-        border-color: #2A7A6F;
+        border-color: #D4622E;
       }
 
       .v2-card-media {
@@ -269,7 +269,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
       .v2-badge {
         display: inline-block;
         background: #E8F4F2;
-        color: #2A7A6F;
+        color: #D4622E;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-size: 0.7rem;
@@ -295,7 +295,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
 
       .v2-card-link {
         display: block;
-        color: #2A7A6F;
+        color: #D4622E;
         font-weight: 600;
         font-size: 0.9rem;
         margin-top: 1rem;
@@ -372,7 +372,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
         .v2-hero-inner { grid-template-columns: 1fr; }
         .v2-hero-right { order: -1; max-width: 260px; margin: 0 auto; }
         .v2-hero-left h1 { font-size: 2.6rem; }
-        .v2-stats-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+        .v2-stats-grid { flex-direction: column; gap: 1.75rem; }
         .v2-cards-anca { grid-template-columns: 1fr; }
         .v2-bio-inner { grid-template-columns: 1fr; }
         .v2-bio-stats { gap: 0.75rem; }
