@@ -6,6 +6,8 @@ const tutteLePatologie = await getCollection('patologie');
 const patologieAnca = tutteLePatologie.filter(p => p.data.categoria === 'anca');
 const patologieGinocchio = tutteLePatologie.filter(p => p.data.categoria === 'ginocchio');
 
+const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+
 const excerpts: Record<string, string> = {
   'la-protesi-danca': "La protesi d'anca è la soluzione chirurgica per la degenerazione avanzata dell'articolazione, con risultati eccellenti in termini di mobilità e qualità della vita.",
   'il-conflitto-femoro-acetabolare': "Una patologia di recente definizione, riconosciuta come causa di artrosi precoce nei pazienti giovani, trattabile anche in artroscopia.",
@@ -29,8 +31,8 @@ const excerpts: Record<string, string> = {
             </p>
           </div>
           <div class="hero-cta-group">
-            <a href="/prenota" class="btn-primary">Prenota una visita</a>
-            <a href="/chi-sono" class="btn-secondary">Chi sono</a>
+            <a href={`${baseUrl}/prenota`} class="btn-primary">Prenota una visita</a>
+            <a href={`${baseUrl}/chi-sono`} class="btn-secondary">Chi sono</a>
           </div>
         </div>
         <div class="hero-right">
@@ -54,11 +56,11 @@ const excerpts: Record<string, string> = {
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Patologie dell'anca</h2>
-        <a href="/patologie/anca" class="section-link">Tutte le patologie →</a>
+        <a href={`${baseUrl}/patologie/anca`} class="section-link">Tutte le patologie →</a>
       </div>
       <div class="patologie-grid">
         {patologieAnca.map(p => (
-          <a href={`/patologie/${p.slug}`} class="patologia-card">
+          <a href={`${baseUrl}/patologie/${p.slug}`} class="patologia-card">
             <span class="card-categoria">Anca</span>
             <h3 class="card-title">{p.data.title}</h3>
             <p class="card-excerpt">{excerpts[p.slug] ?? p.data.description}</p>
@@ -74,11 +76,11 @@ const excerpts: Record<string, string> = {
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Patologie del ginocchio</h2>
-        <a href="/patologie/ginocchio" class="section-link">Tutte le patologie →</a>
+        <a href={`${baseUrl}/patologie/ginocchio`} class="section-link">Tutte le patologie →</a>
       </div>
       <div class="patologie-grid">
         {patologieGinocchio.map(p => (
-          <a href={`/patologie/${p.slug}`} class="patologia-card">
+          <a href={`${baseUrl}/patologie/${p.slug}`} class="patologia-card">
             <span class="card-categoria">Ginocchio</span>
             <h3 class="card-title">{p.data.title}</h3>
             <p class="card-excerpt">{excerpts[p.slug] ?? p.data.description}</p>
@@ -98,7 +100,7 @@ const excerpts: Record<string, string> = {
           <p>
             Laureato con lode all'Università di Torino e specializzato con lode a Siena, ho dedicato oltre 25 anni alla chirurgia ortopedica con una costante attenzione alla ricerca scientifica. Associate Editor del <em>Journal of Orthopaedics and Traumatology</em>, International Member dell'AAOS, autore di oltre 100 pubblicazioni su riviste internazionali.
           </p>
-          <a href="/chi-sono" class="btn-primary">Leggi il curriculum completo</a>
+          <a href={`${baseUrl}/chi-sono`} class="btn-primary">Leggi il curriculum completo</a>
         </div>
         <div class="badges">
           <span class="badge">AAOS International Member</span>
