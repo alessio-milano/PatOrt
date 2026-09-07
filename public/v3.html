@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>V3 — Precision Dark | Dott. Rivera</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:#0D1117;color:#E8E4DE;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 2.5rem}
+
+/* ── HEADER ── */
+header{position:sticky;top:0;z-index:100;background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06);padding:1rem 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.logo{display:flex;align-items:center;gap:.7rem}
+.logo-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#fff}
+.logo-role{font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-top:.1rem}
+nav{display:flex;align-items:center;gap:2rem;font-size:.82rem;font-weight:500;color:rgba(255,255,255,.5)}
+nav a:hover{color:#fff}
+.nav-cta{background:#D4622E;color:#fff!important;padding:.5rem 1.2rem;border-radius:3px;font-size:.8rem;font-weight:600}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;padding:6rem 0 5rem}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%, rgba(212,98,46,.12) 0%, transparent 70%)}
+.hero::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(212,98,46,.4),transparent)}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center;position:relative;z-index:1}
+.hero-eyebrow{display:flex;align-items:center;gap:.8rem;margin-bottom:1.5rem}
+.eyebrow-line{width:2.5rem;height:1px;background:#D4622E}
+.eyebrow-text{font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:#D4622E;font-weight:600}
+h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5rem);font-weight:900;line-height:1.02;letter-spacing:-.02em;color:#fff;margin-bottom:1.8rem}
+h1 em{font-style:italic;font-weight:400;color:rgba(255,255,255,.7)}
+.hero-cred{border-left:2px solid #D4622E;padding-left:1.2rem;margin-bottom:2.5rem}
+.hero-cred strong{display:block;color:#fff;font-size:1rem;font-weight:600;margin-bottom:.3rem}
+.hero-cred span{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.6}
+.hero-btns{display:flex;gap:1rem;margin-bottom:3rem}
+.btn-primary{background:#D4622E;color:#fff;padding:.85rem 2rem;border-radius:3px;font-size:.9rem;font-weight:700;letter-spacing:.02em;transition:background .2s,transform .15s;display:inline-block}
+.btn-primary:hover{background:#B84E20;transform:translateY(-1px)}
+.btn-secondary{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);padding:.85rem 2rem;border-radius:3px;font-size:.9rem;transition:border-color .2s;display:inline-block}
+.btn-secondary:hover{border-color:rgba(255,255,255,.5)}
+.hero-quote{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-left:2px solid rgba(212,98,46,.5);padding:1.2rem 1.5rem;border-radius:0 4px 4px 0}
+.hero-quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:.6rem}
+.hero-quote cite{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#D4622E;font-style:normal;font-weight:600}
+
+/* Blueprint SVG panel */
+.blueprint-panel{position:relative}
+.blueprint-panel svg{width:100%;opacity:.85}
+
+/* ── STATS ── */
+.stats-bar{background:#090D12;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:3rem 0}
+.stats-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:600px;margin:0 auto}
+.stat-item{text-align:center;padding:1.5rem 2rem;position:relative}
+.stat-item+.stat-item::before{content:'';position:absolute;left:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,.08)}
+.stat-number{font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:900;line-height:1;background:linear-gradient(135deg,#D4622E,#E87848);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.stat-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-top:.5rem;display:block;line-height:1.5}
+
+/* ── PATOLOGIE ── */
+.section-dark{padding:5rem 0;position:relative}
+.section-light-bg{background:#111520}
+.section-header{margin-bottom:3rem}
+.section-eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:#D4622E;font-weight:600;margin-bottom:.6rem}
+.section-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:#fff;line-height:1.2}
+.section-rule{width:48px;height:2px;background:#D4622E;margin-top:1rem}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.patologia-card{background:#0D1117;padding:2rem;transition:background .2s;cursor:pointer;position:relative;overflow:hidden}
+.patologia-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 0%,rgba(212,98,46,.06) 0%,transparent 70%);opacity:0;transition:opacity .3s}
+.patologia-card:hover{background:#13191F}
+.patologia-card:hover::before{opacity:1}
+.placeholder-img{height:160px;background:#13191F;border:1px dashed rgba(255,255,255,.08);border-radius:3px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+.placeholder-img span{font-size:.72rem;color:rgba(255,255,255,.2);text-align:center;line-height:1.5}
+.card-badge{display:inline-block;font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:#D4622E;border:1px solid rgba(212,98,46,.3);padding:.2rem .6rem;border-radius:2px;margin-bottom:.7rem}
+.card-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:.6rem;line-height:1.3}
+.card-excerpt{font-size:.85rem;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:1rem}
+.card-link{font-size:.82rem;color:#D4622E;font-weight:600;display:flex;align-items:center;gap:.4rem}
+.card-link::after{content:'→';transition:transform .2s}
+.patologia-card:hover .card-link::after{transform:translateX(4px)}
+
+/* ── BIO ── */
+.bio-section{padding:5rem 0;position:relative;overflow:hidden}
+.bio-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(212,98,46,.08) 0%,transparent 60%)}
+.bio-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
+.bio-tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:#D4622E;font-weight:600;margin-bottom:1rem}
+.bio-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:1.2rem}
+.bio-text{font-size:.92rem;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:1.8rem}
+.badges-wrap{display:flex;flex-wrap:wrap;gap:.5rem}
+.badge{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:.35rem .8rem;border-radius:100px;font-size:.75rem;color:rgba(255,255,255,.6)}
+.bio-stats{display:flex;flex-direction:column;gap:2rem}
+.bio-stat-item{border-left:2px solid rgba(212,98,46,.3);padding-left:1.5rem}
+.bio-stat-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;background:linear-gradient(135deg,#D4622E,#E87848);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block}
+.bio-stat-lab{font-size:.75rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem;display:block}
+
+/* ── FOOTER ── */
+footer{background:#090D12;border-top:1px solid rgba(255,255,255,.06);padding:2.5rem 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;color:rgba(255,255,255,.3)}
+.footer-name{font-family:'Playfair Display',serif;color:rgba(255,255,255,.7);font-size:.95rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <svg viewBox="0 0 42 42" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="42" height="42" rx="8" fill="#1a2332"/>
+          <path d="M 9 26 A 13 13 0 0 1 32.6 15.2" transform="rotate(-20 24 15.2)" fill="none" stroke="#D4622E" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="15.2" r="5.2" fill="#fff"/>
+          <path d="M20.4 19.2C19.4 23.6 17.9 28 15.9 32.2C15.4 33.3 17.5 34 18.2 32.9C20.9 28.6 23.6 24 25.8 19.9C24.1 18.5 21.9 18.2 20.4 19.2Z" fill="#fff"/>
+        </svg>
+        <div>
+          <div class="logo-name">Dott. Fabrizio Rivera</div>
+          <div class="logo-role">Ortopedia · Torino</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Chi sono</a>
+        <a href="#">Anca</a>
+        <a href="#">Ginocchio</a>
+        <a href="#" class="nav-cta">Prenota una visita</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Ortopedia e Traumatologia · Torino</span></div>
+        <h1>Dott.<br/>Fabrizio<br/><em>Rivera</em></h1>
+        <div class="hero-cred">
+          <strong>Direttore S.C. Ortopedia e Traumatologia</strong>
+          <span>Presidio Sanitario Ospedale Cottolengo · Torino<br/>Specialista in chirurgia protesica di anca e ginocchio</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary">Prenota una visita</a>
+          <a href="#" class="btn-secondary">Chi sono</a>
+        </div>
+        <div class="hero-quote">
+          <p>«La sua intensa attività editoriale e il profilo accademico garantiranno un ruolo sempre più centrale all'Ospedale Cottolengo nel panorama sanitario regionale.»</p>
+          <cite>Avv. Gian Paolo Zanetta · Direttore Generale, Ospedale Cottolengo</cite>
+        </div>
+      </div>
+      <!-- Blueprint SVG -->
+      <div class="blueprint-panel">
+        <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer glow rings -->
+          <circle cx="200" cy="180" r="160" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+          <circle cx="200" cy="180" r="130" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+          <circle cx="200" cy="180" r="100" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+          <!-- Acetabulum arc -->
+          <path d="M 100 220 A 110 110 0 0 1 300 220" fill="none" stroke="rgba(212,98,46,0.5)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 115 215 A 90 90 0 0 1 285 215" fill="rgba(212,98,46,0.06)" stroke="rgba(212,98,46,0.2)" stroke-width="1.5"/>
+          <!-- Femoral head -->
+          <circle cx="200" cy="190" r="42" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+          <circle cx="200" cy="190" r="30" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <!-- Femoral neck -->
+          <path d="M 180 226 L 168 280 L 190 280 L 195 232" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <!-- Stem -->
+          <path d="M 168 280 L 158 370 L 200 375 L 238 370 L 228 280 L 190 280 Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <!-- Center axis -->
+          <line x1="200" y1="140" x2="200" y2="390" stroke="rgba(212,98,46,0.3)" stroke-width="1" stroke-dasharray="5 4"/>
+          <!-- Cross hairs -->
+          <line x1="155" y1="190" x2="245" y2="190" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <!-- Pelvis hint -->
+          <path d="M 60 200 Q 80 160 130 175 Q 160 182 200 180 Q 240 182 270 175 Q 320 160 340 200" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <!-- Corner decorations -->
+          <path d="M 30 30 L 60 30 L 60 60" fill="none" stroke="rgba(212,98,46,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M 370 30 L 340 30 L 340 60" fill="none" stroke="rgba(212,98,46,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M 30 390 L 60 390 L 60 360" fill="none" stroke="rgba(212,98,46,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M 370 390 L 340 390 L 340 360" fill="none" stroke="rgba(212,98,46,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Grid dots -->
+          <circle cx="200" cy="190" r="2.5" fill="rgba(212,98,46,0.6)"/>
+          <circle cx="200" cy="140" r="1.5" fill="rgba(255,255,255,0.2)"/>
+          <circle cx="200" cy="390" r="1.5" fill="rgba(255,255,255,0.15)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-number">25+</span>
+        <span class="stat-label">anni di esperienza<br/>clinica</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100+</span>
+        <span class="stat-label">pubblicazioni<br/>scientifiche</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PATOLOGIE ANCA -->
+<section class="section-dark">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">Specializzazione</div>
+      <h2 class="section-title">Patologie dell'anca</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="cards-grid">
+      <div class="patologia-card">
+        <div class="placeholder-img"><span>Illustrazione<br/>Protesi d'anca</span></div>
+        <span class="card-badge">Anca</span>
+        <h3 class="card-title">La protesi d'anca</h3>
+        <p class="card-excerpt">La sostituzione protesica è la soluzione definitiva per la degenerazione articolare avanzata, con eccellenti risultati in termini di mobilità.</p>
+        <span class="card-link">Approfondisci</span>
+      </div>
+      <div class="patologia-card">
+        <div class="placeholder-img"><span>Illustrazione<br/>FAI</span></div>
+        <span class="card-badge">Anca</span>
+        <h3 class="card-title">Il conflitto femoro-acetabolare</h3>
+        <p class="card-excerpt">Patologia di recente definizione riconosciuta come causa di artrosi precoce nei pazienti giovani, trattabile in artroscopia.</p>
+        <span class="card-link">Approfondisci</span>
+      </div>
+      <div class="patologia-card">
+        <div class="placeholder-img"><span>Illustrazione<br/>Gonartrosi</span></div>
+        <span class="card-badge">Ginocchio</span>
+        <h3 class="card-title">La gonartrosi</h3>
+        <p class="card-excerpt">L'artrosi del ginocchio colpisce milioni di persone. Esistono trattamenti efficaci per ogni stadio della malattia.</p>
+        <span class="card-link">Approfondisci</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio-section section-light-bg">
+  <div class="container">
+    <div class="bio-grid">
+      <div>
+        <div class="bio-tag">Chi sono</div>
+        <h2 class="bio-title">Un percorso fondato su ricerca e pratica clinica</h2>
+        <p class="bio-text">Laureato con lode all'Università di Torino e specializzato con lode a Siena, ho dedicato oltre 25 anni alla chirurgia ortopedica con una costante attenzione alla ricerca scientifica. Associate Editor del <em>Journal of Orthopaedics and Traumatology</em>, International Member dell'AAOS.</p>
+        <a href="#" class="btn-primary">Curriculum completo</a>
+        <div style="margin-top:1.8rem">
+          <div class="badges-wrap">
+            <span class="badge">AAOS International Member</span>
+            <span class="badge">SIOT</span>
+            <span class="badge">AIR</span>
+            <span class="badge">Journal of Orthopaedics — Associate Editor</span>
+            <span class="badge">Club Italiano Osteosintesi</span>
+          </div>
+        </div>
+      </div>
+      <div class="bio-stats">
+        <div class="bio-stat-item">
+          <span class="bio-stat-num">25+</span>
+          <span class="bio-stat-lab">anni di esperienza clinica</span>
+        </div>
+        <div class="bio-stat-item">
+          <span class="bio-stat-num">100+</span>
+          <span class="bio-stat-lab">pubblicazioni internazionali</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Dott. Fabrizio Rivera</div>
+        <div style="margin-top:.3rem;font-size:.75rem">Ospedale Cottolengo · Torino</div>
+      </div>
+      <div>© 2026 · Privacy policy</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
