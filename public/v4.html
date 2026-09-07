@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>V4 — Editoriale Clinico | Dott. Rivera</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px}
+body{background:#fff;color:#0A0A0A;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 3rem}
+
+/* ── HEADER ── */
+header{border-bottom:2px solid #0A0A0A;padding:0}
+.header-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:64px}
+.logo-mark{display:flex;align-items:center;gap:.6rem}
+.logo-mark-name{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;letter-spacing:-.01em}
+.logo-mark-role{font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;color:#888;margin-top:.1rem}
+.header-center{text-align:center;font-size:.62rem;text-transform:uppercase;letter-spacing:.18em;color:#888;font-weight:500;border-left:1px solid #e0e0e0;border-right:1px solid #e0e0e0;height:100%;display:flex;align-items:center;justify-content:center;padding:0 2rem}
+nav{display:flex;align-items:center;justify-content:flex-end;gap:2rem;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+nav a{color:#555}
+nav a:hover{color:#0A0A0A}
+.nav-cta{background:#D4622E;color:#fff!important;padding:.45rem 1rem}
+
+/* ── HERO ── */
+.hero{border-bottom:2px solid #0A0A0A;padding:0;overflow:hidden}
+.hero-top{border-bottom:1px solid #e0e0e0;padding:.6rem 0}
+.hero-top-inner{display:flex;align-items:center;justify-content:space-between;font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;color:#999}
+.hero-top-tag{display:flex;align-items:center;gap:.6rem}
+.hero-top-tag::before{content:'';display:block;width:1.5rem;height:1px;background:#D4622E}
+
+.hero-main{display:grid;grid-template-columns:1fr 380px;min-height:70vh}
+.hero-left{padding:4rem 3rem 4rem 0;border-right:1px solid #e0e0e0;display:flex;flex-direction:column;justify-content:space-between}
+.hero-right{padding:3rem;display:flex;flex-direction:column;justify-content:space-between;background:#FAFAF8}
+
+/* GIANT NAME */
+.giant-name{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(4rem,8vw,8.5rem);line-height:.95;letter-spacing:-.03em;color:#0A0A0A}
+.giant-name .accent{color:#D4622E}
+.giant-name .italic{font-style:italic;font-weight:400}
+
+.hero-divider{width:48px;height:3px;background:#D4622E;margin:2.5rem 0}
+
+.hero-credential{max-width:480px}
+.hero-credential .role{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#0A0A0A;line-height:1.3;margin-bottom:.5rem}
+.hero-credential .place{font-size:.88rem;color:#555;line-height:1.6}
+.hero-credential .place strong{color:#0A0A0A;font-weight:600}
+
+.hero-btns{display:flex;gap:1rem;margin-top:2.5rem}
+.btn-fill{background:#0A0A0A;color:#fff;padding:.85rem 2.2rem;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;display:inline-block;transition:background .2s}
+.btn-fill:hover{background:#D4622E}
+.btn-outline{border:2px solid #0A0A0A;color:#0A0A0A;padding:.85rem 2.2rem;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;display:inline-block;transition:all .2s}
+.btn-outline:hover{background:#0A0A0A;color:#fff}
+
+/* Right panel */
+.hero-right-tag{font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:#D4622E;font-weight:700;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid #e0e0e0}
+.stat-large{margin-bottom:2.5rem}
+.stat-large .num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;line-height:1;color:#0A0A0A;display:block}
+.stat-large .num sup{font-size:2rem;font-weight:400;font-style:italic}
+.stat-large .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-top:.2rem;display:block}
+.stat-divider{height:1px;background:#e0e0e0;margin:.5rem 0 2rem}
+
+.quote-panel{border-top:1px solid #e0e0e0;padding-top:1.5rem;margin-top:auto}
+.quote-mark{font-family:'Playfair Display',serif;font-size:4rem;line-height:.8;color:#e0e0e0;margin-bottom:.5rem}
+.quote-text{font-family:'Playfair Display',serif;font-style:italic;font-size:.88rem;color:#444;line-height:1.65;margin-bottom:.8rem}
+.quote-source{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:#D4622E;font-weight:600}
+
+/* ── ORANGE BAND ── */
+.orange-band{background:#D4622E;padding:1.2rem 0;border-top:none;border-bottom:none}
+.orange-inner{display:flex;align-items:center;justify-content:space-between}
+.ob-text{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:#fff}
+.ob-cta{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:#fff;border:1px solid rgba(255,255,255,.6);padding:.5rem 1.2rem;white-space:nowrap}
+.ob-dots{display:flex;gap:.5rem;align-items:center}
+.ob-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3)}
+.ob-dot.active{background:#fff}
+
+/* ── PATOLOGIE ── */
+.patologie-section{padding:5rem 0;border-bottom:2px solid #0A0A0A}
+.section-header-editorial{display:grid;grid-template-columns:1fr auto;align-items:baseline;margin-bottom:3rem;padding-bottom:1.2rem;border-bottom:2px solid #0A0A0A}
+.sec-title-editorial{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;letter-spacing:-.02em;color:#0A0A0A}
+.sec-title-editorial em{font-style:italic;font-weight:400;color:#D4622E}
+.sec-count{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:#999;font-weight:500}
+
+.cards-editorial{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid #0A0A0A}
+.card-e{padding:2.5rem 2rem;border-right:2px solid #0A0A0A;position:relative;transition:background .2s;cursor:pointer}
+.card-e:last-child{border-right:none}
+.card-e:hover{background:#FFF8F5}
+.card-number{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;color:#F0EDE8;line-height:1;position:absolute;top:1.5rem;right:1.5rem;transition:color .2s}
+.card-e:hover .card-number{color:#FADDCE}
+.card-cat{font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;color:#D4622E;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.card-cat::before{content:'';display:block;width:1rem;height:1px;background:#D4622E}
+.card-title-e{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#0A0A0A;line-height:1.25;margin-bottom:.8rem;position:relative;z-index:1}
+.placeholder-e{height:140px;background:#F7F4F0;border:1px dashed #D4C8BA;display:flex;align-items:center;justify-content:center;margin:1.2rem 0}
+.placeholder-e span{font-size:.68rem;color:#B8AA98;text-align:center}
+.card-excerpt-e{font-size:.83rem;color:#666;line-height:1.7;margin-bottom:1.2rem;position:relative;z-index:1}
+.card-link-e{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:#0A0A0A;border-bottom:2px solid #D4622E;padding-bottom:1px;display:inline-block;transition:color .2s}
+.card-e:hover .card-link-e{color:#D4622E}
+
+/* ── BIO ── */
+.bio-editorial{padding:5rem 0;border-bottom:2px solid #0A0A0A;background:#0A0A0A;color:#fff}
+.bio-ed-inner{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.bio-ed-left{padding-right:4rem;border-right:1px solid rgba(255,255,255,.1)}
+.bio-ed-right{padding-left:4rem;display:flex;flex-direction:column;justify-content:space-between}
+.bio-ed-tag{font-size:.65rem;text-transform:uppercase;letter-spacing:.15em;color:#D4622E;font-weight:700;margin-bottom:1.5rem;display:flex;align-items:center;gap:.8rem}
+.bio-ed-tag::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.1)}
+.bio-ed-title{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:1.5rem}
+.bio-ed-title em{font-style:italic;font-weight:400;color:rgba(255,255,255,.5)}
+.bio-ed-text{font-size:.9rem;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:2rem}
+.bio-ed-cta{display:inline-block;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:#fff;border-bottom:2px solid #D4622E;padding-bottom:2px}
+.stat-editorial{margin-bottom:2.5rem}
+.stat-editorial .n{font-family:'Playfair Display',serif;font-size:6rem;font-weight:900;line-height:.9;color:#fff;display:block}
+.stat-editorial .n span{color:#D4622E}
+.stat-editorial .l{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-top:.5rem;display:block}
+.badges-ed{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)}
+.badge-ed{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;border:1px solid rgba(255,255,255,.15);padding:.3rem .7rem;color:rgba(255,255,255,.5)}
+
+/* ── FOOTER ── */
+footer{background:#0A0A0A;padding:1.5rem 0}
+.footer-ed{display:flex;align-items:center;justify-content:space-between;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.3)}
+.footer-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:rgba(255,255,255,.7);text-transform:none;letter-spacing:0}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo-mark">
+        <svg viewBox="0 0 42 42" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <rect width="42" height="42" rx="6" fill="#0A0A0A"/>
+          <path d="M 9 26 A 13 13 0 0 1 32.6 15.2" transform="rotate(-20 24 15.2)" fill="none" stroke="#D4622E" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="15.2" r="5.2" fill="#fff"/>
+          <path d="M20.4 19.2C19.4 23.6 17.9 28 15.9 32.2C15.4 33.3 17.5 34 18.2 32.9C20.9 28.6 23.6 24 25.8 19.9C24.1 18.5 21.9 18.2 20.4 19.2Z" fill="#fff"/>
+        </svg>
+        <div>
+          <div class="logo-mark-name">Dott. Fabrizio Rivera</div>
+          <div class="logo-mark-role">Ortopedia · Torino</div>
+        </div>
+      </div>
+      <div class="header-center">Ospedale Cottolengo · Torino · Est. 2026</div>
+      <nav>
+        <a href="#">Chi sono</a>
+        <a href="#">Anca</a>
+        <a href="#">Ginocchio</a>
+        <a href="#" class="nav-cta">Prenota</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top">
+    <div class="container">
+      <div class="hero-top-inner">
+        <div class="hero-top-tag">Ortopedia e Traumatologia</div>
+        <div>Chirurgia protesica · Anca · Ginocchio · Torino</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-main container" style="padding-left:0;padding-right:0;max-width:100%">
+    <div style="max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 380px">
+    <div class="hero-left" style="padding-left:3rem">
+      <div>
+        <div class="giant-name">
+          Dott.<br/>
+          <span class="accent">Fabrizio</span><br/>
+          <span class="italic">Rivera</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-credential">
+          <div class="role">Direttore S.C. Ortopedia e Traumatologia<br/>Presidio Sanitario Ospedale Cottolengo, Torino</div>
+          <div class="place" style="margin-top:.6rem">Specialista in <strong>chirurgia protesica</strong> di anca e ginocchio.<br/>Oltre 25 anni di esperienza clinica e ricerca scientifica.</div>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#" class="btn-fill">Prenota una visita</a>
+        <a href="#" class="btn-outline">Chi sono</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div>
+        <div class="hero-right-tag">In numeri</div>
+        <div class="stat-large">
+          <span class="num">25<sup>+</sup></span>
+          <span class="lbl">anni di esperienza clinica</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-large">
+          <span class="num">100<sup>+</sup></span>
+          <span class="lbl">pubblicazioni scientifiche</span>
+        </div>
+      </div>
+      <div class="quote-panel">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">«La sua intensa attività editoriale e il profilo accademico garantiranno un ruolo sempre più centrale all'Ospedale Cottolengo.»</p>
+        <div class="quote-source">Avv. G.P. Zanetta · Dir. Gen., Ospedale Cottolengo</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORANGE BAND -->
+<div class="orange-band">
+  <div class="container">
+    <div class="orange-inner">
+      <div class="ob-dots">
+        <div class="ob-dot active"></div>
+        <div class="ob-dot"></div>
+        <div class="ob-dot"></div>
+      </div>
+      <span class="ob-text">Associate Editor — Journal of Orthopaedics and Traumatology · AAOS International Member · SIOT · AIR</span>
+      <a href="#" class="ob-cta">Prenota una visita</a>
+    </div>
+  </div>
+</div>
+
+<!-- PATOLOGIE -->
+<section class="patologie-section">
+  <div class="container">
+    <div class="section-header-editorial">
+      <h2 class="sec-title-editorial">Patologie dell'<em>anca</em><br/>e del ginocchio</h2>
+      <span class="sec-count">03 patologie</span>
+    </div>
+    <div class="cards-editorial">
+      <div class="card-e">
+        <span class="card-number">01</span>
+        <div class="card-cat">Anca</div>
+        <h3 class="card-title-e">La protesi d'anca</h3>
+        <div class="placeholder-e"><span>Illustrazione<br/>Protesi d'anca</span></div>
+        <p class="card-excerpt-e">La sostituzione protesica è la soluzione definitiva per la degenerazione articolare avanzata, con eccellenti risultati in mobilità.</p>
+        <a href="#" class="card-link-e">Approfondisci</a>
+      </div>
+      <div class="card-e">
+        <span class="card-number">02</span>
+        <div class="card-cat">Anca</div>
+        <h3 class="card-title-e">Il conflitto femoro-acetabolare (FAI)</h3>
+        <div class="placeholder-e"><span>Illustrazione<br/>Conflitto FAI</span></div>
+        <p class="card-excerpt-e">Patologia riconosciuta come causa di artrosi precoce nei pazienti giovani, spesso trattabile con chirurgia artroscopica.</p>
+        <a href="#" class="card-link-e">Approfondisci</a>
+      </div>
+      <div class="card-e">
+        <span class="card-number">03</span>
+        <div class="card-cat">Ginocchio</div>
+        <h3 class="card-title-e">La gonartrosi</h3>
+        <div class="placeholder-e"><span>Illustrazione<br/>Gonartrosi</span></div>
+        <p class="card-excerpt-e">L'artrosi del ginocchio colpisce milioni di persone. Trattamenti efficaci per ogni stadio, dalla terapia conservativa alla protesi.</p>
+        <a href="#" class="card-link-e">Approfondisci</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio-editorial">
+  <div class="container">
+    <div class="bio-ed-inner">
+      <div class="bio-ed-left">
+        <div class="bio-ed-tag">Chi sono</div>
+        <h2 class="bio-ed-title">Ricerca,<br/>pratica <em>clinica</em>,<br/>eccellenza.</h2>
+        <p class="bio-ed-text">Laureato con lode all'Università di Torino e specializzato con lode a Siena, ho dedicato oltre 25 anni alla chirurgia ortopedica con una costante attenzione alla ricerca scientifica. Associate Editor del <em>Journal of Orthopaedics and Traumatology</em>, International Member dell'AAOS, autore di oltre 100 pubblicazioni su riviste internazionali.</p>
+        <a href="#" class="bio-ed-cta">Leggi il curriculum completo →</a>
+        <div class="badges-ed">
+          <span class="badge-ed">AAOS</span>
+          <span class="badge-ed">SIOT</span>
+          <span class="badge-ed">AIR</span>
+          <span class="badge-ed">SIdA</span>
+          <span class="badge-ed">Club Italiano Osteosintesi</span>
+          <span class="badge-ed">Journal Assoc. Editor</span>
+        </div>
+      </div>
+      <div class="bio-ed-right">
+        <div class="stat-editorial">
+          <span class="n">25<span>+</span></span>
+          <span class="l">anni di esperienza</span>
+        </div>
+        <div class="stat-editorial">
+          <span class="n">100<span>+</span></span>
+          <span class="l">pubblicazioni internazionali</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-ed">
+      <span class="footer-brand">Dott. Fabrizio Rivera</span>
+      <span>Ospedale Cottolengo · Torino</span>
+      <span>© 2026 · Privacy policy</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
