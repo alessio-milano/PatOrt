@@ -1,32 +1,32 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayoutV2 from '../../layouts/BaseLayoutV2.astro';
 
 const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
 ---
-<BaseLayout
+<BaseLayoutV2
   title="Chi sono"
   description="Fabrizio Rivera, Direttore S.C. Ortopedia e Traumatologia, Ospedale Cottolengo Torino. 25+ anni di esperienza clinica, 100+ pubblicazioni scientifiche."
 >
 
   <!-- HERO -->
-  <section class="article-hero">
-    <div class="container">
-      <p class="article-eyebrow">Chi sono</p>
+  <section class="v2-article-hero">
+    <div class="v2-container">
+      <p class="v2-eyebrow">Chi sono</p>
       <h1>Dott. Fabrizio Rivera</h1>
-      <p class="lead">
+      <p class="v2-lead">
         Direttore della S.C. Ortopedia e Traumatologia presso il Presidio Sanitario Ospedale Cottolengo di Torino. Specializzato in chirurgia protesica e artroscopica dell'anca e del ginocchio.
       </p>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start;">
+  <section class="v2-article-body">
+    <div class="v2-container">
+      <div class="v2-chi-sono-grid">
 
         <!-- BIO -->
-        <div class="article-content">
+        <div class="v2-article-content">
 
-          <img src={`${baseUrl}/img/2020/12/FotoRivera2.jpg`} alt="Dott. Fabrizio Rivera — Ortopedico Torino" style="max-width: 280px; border-radius: 4px; margin-bottom: 2rem;" />
+          <img src={`${baseUrl}/img/2020/12/FotoRivera2.jpg`} alt="Dott. Fabrizio Rivera — Ortopedico Torino" class="v2-chi-sono-photo" />
 
           <h2>Formazione</h2>
           <p>
@@ -52,25 +52,22 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
             Autore di oltre 100 pubblicazioni scientifiche su riviste internazionali con impact factor. Relatore a numerosi congressi nazionali e internazionali.
           </p>
 
-          <!-- NOTA: questa pagina sarà aggiornata da Fabrizio con contenuto più recente -->
-          <!-- La lista completa delle pubblicazioni va estratta e aggiornata -->
-
         </div>
 
         <!-- SIDEBAR -->
         <div>
-          <div style="background: var(--paper); border: 1px solid var(--border); border-radius: 8px; padding: 1.8rem; position: sticky; top: 6rem;">
-            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); font-weight: 600; margin-bottom: 1rem;">Dove ricevo</p>
-            <p style="font-weight: 600; color: var(--ink); margin-bottom: 0.3rem;">Ospedale Cottolengo</p>
-            <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1.5rem;">Torino</p>
-            <a href={`${baseUrl}/prenota`} class="btn-primary" style="display: block; text-align: center;">Prenota una visita</a>
+          <div class="v2-sidebar-card">
+            <p class="v2-sidebar-label">Dove ricevo</p>
+            <p class="v2-sidebar-name">Ospedale Cottolengo</p>
+            <p class="v2-sidebar-city">Torino</p>
+            <a href={`${baseUrl}/prenota`} class="v2-btn v2-btn-primary" style="display: block; text-align: center;">Prenota una visita</a>
 
-            <hr style="border: none; border-top: 1px solid var(--border); margin: 1.5rem 0;" />
+            <hr class="v2-sidebar-divider" />
 
-            <p style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); font-weight: 600; margin-bottom: 1rem;">Memberships</p>
-            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <p class="v2-sidebar-label">Memberships</p>
+            <div class="v2-sidebar-memberships">
               {['AAOS International Member', 'SIOT', 'AIR', 'SIdA', 'Club Italiano Osteosintesi'].map(b => (
-                <span style="font-size: 0.82rem; color: var(--ink);">· {b}</span>
+                <span>· {b}</span>
               ))}
             </div>
           </div>
@@ -80,4 +77,4 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
     </div>
   </section>
 
-</BaseLayout>
+</BaseLayoutV2>

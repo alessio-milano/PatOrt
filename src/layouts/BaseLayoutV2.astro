@@ -368,6 +368,175 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
         font-size: 0.78rem;
       }
 
+      /* ===== ARTICLE / CHI SONO ===== */
+      .v2-article-hero {
+        background: linear-gradient(145deg, #0a1628 0%, #1a3a5c 100%);
+        padding: clamp(3rem, 6vw, 4.5rem) 0;
+      }
+
+      .v2-article-hero h1 {
+        font-family: 'Playfair Display', Georgia, serif;
+        color: #FFFFFF;
+        font-size: clamp(2rem, 4vw, 2.7rem);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
+
+      .v2-article-hero .v2-lead {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        max-width: 680px;
+      }
+
+      .v2-article-body {
+        background: #F7F3EC;
+        padding: clamp(2.5rem, 5vw, 4rem) 0;
+      }
+
+      .v2-article-content {
+        max-width: 740px;
+      }
+
+      .v2-article-content h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.5rem;
+        color: #15293F;
+        margin: 2.5rem 0 0.8rem;
+        font-weight: 600;
+      }
+
+      .v2-article-content h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.2rem;
+        color: #15293F;
+        margin: 1.8rem 0 0.6rem;
+      }
+
+      .v2-article-content p {
+        margin-bottom: 1.2rem;
+        color: #3A3A3A;
+        line-height: 1.8;
+      }
+
+      .v2-article-content ul,
+      .v2-article-content ol {
+        margin: 0.8rem 0 1.2rem 1.5rem;
+      }
+
+      .v2-article-content li {
+        margin-bottom: 0.4rem;
+        line-height: 1.7;
+        color: #3A3A3A;
+      }
+
+      .v2-article-content strong { color: #15293F; }
+
+      .v2-article-content a { color: #D4622E; }
+
+      .v2-article-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin: 1.5rem 0;
+        display: block;
+        box-shadow: 0 2px 12px rgba(21, 41, 63, 0.1);
+      }
+
+      .v2-article-content img + em {
+        display: block;
+        font-size: 0.82rem;
+        color: #6B7280;
+        margin-top: -1rem;
+        margin-bottom: 1.5rem;
+        font-style: italic;
+      }
+
+      .v2-article-cta-box {
+        background: #FFFFFF;
+        border: 1px solid #E8E2D8;
+        border-left: 4px solid #D4622E;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-top: 3rem;
+      }
+
+      .v2-article-cta-box h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.2rem;
+        color: #15293F;
+        margin-bottom: 0.6rem;
+      }
+
+      .v2-article-cta-box p {
+        font-size: 0.92rem;
+        color: #6B7280;
+        margin-bottom: 1.2rem;
+      }
+
+      .v2-chi-sono-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      .v2-chi-sono-photo {
+        max-width: 280px;
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 2rem;
+        display: block;
+        box-shadow: 0 8px 24px rgba(21, 41, 63, 0.12);
+      }
+
+      .v2-sidebar-card {
+        background: #FFFFFF;
+        border: 1px solid #E8E2D8;
+        border-radius: 8px;
+        padding: 1.8rem;
+        position: sticky;
+        top: 2rem;
+      }
+
+      .v2-sidebar-label {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #D4622E;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .v2-sidebar-card p.v2-sidebar-name {
+        font-weight: 700;
+        color: #15293F;
+        margin-bottom: 0.3rem;
+      }
+
+      .v2-sidebar-card p.v2-sidebar-city {
+        font-size: 0.88rem;
+        color: #6B7280;
+        margin-bottom: 1.5rem;
+      }
+
+      .v2-sidebar-divider {
+        border: none;
+        border-top: 1px solid #E8E2D8;
+        margin: 1.5rem 0;
+      }
+
+      .v2-sidebar-memberships {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .v2-sidebar-memberships span {
+        font-size: 0.82rem;
+        color: #15293F;
+      }
+
       @media (max-width: 860px) {
         .v2-hero-inner { grid-template-columns: 1fr; }
         .v2-hero-right { order: -1; max-width: 260px; margin: 0 auto; }
@@ -376,6 +545,7 @@ const { title, description = "Dott. Fabrizio Rivera — Specialista in Ortopedia
         .v2-cards-anca { grid-template-columns: 1fr; }
         .v2-bio-inner { grid-template-columns: 1fr; }
         .v2-bio-stats { gap: 0.75rem; }
+        .v2-chi-sono-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       }
     </style>
   </head>

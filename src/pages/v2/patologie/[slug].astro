@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayoutV2 from '../../../layouts/BaseLayoutV2.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -14,29 +14,30 @@ interface Props { patologia: CollectionEntry<'patologie'>; }
 const { patologia } = Astro.props;
 const { Content } = await patologia.render();
 const categoria = patologia.data.categoria === 'anca' ? "dell'anca" : "del ginocchio";
+
 const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
 ---
-<BaseLayout title={patologia.data.title} description={patologia.data.description}>
+<BaseLayoutV2 title={patologia.data.title} description={patologia.data.description}>
 
-  <section class="article-hero">
-    <div class="container">
-      <p class="article-eyebrow">Patologie {categoria}</p>
+  <section class="v2-article-hero">
+    <div class="v2-container">
+      <p class="v2-eyebrow">Patologie {categoria}</p>
       <h1>{patologia.data.title}</h1>
-      <p class="lead">{patologia.data.description}</p>
+      <p class="v2-lead">{patologia.data.description}</p>
     </div>
   </section>
 
-  <section class="article-body">
-    <div class="container">
-      <div class="article-content">
+  <section class="v2-article-body">
+    <div class="v2-container">
+      <div class="v2-article-content">
         <Content />
-        <div class="article-cta-box">
+        <div class="v2-article-cta-box">
           <h3>Hai bisogno di una valutazione?</h3>
           <p>Il Dott. Rivera riceve presso l'Ospedale Cottolengo di Torino. È possibile prenotare una visita specialistica per una valutazione approfondita della sua condizione.</p>
-          <a href={`${baseUrl}/prenota`} class="btn-primary">Prenota una visita</a>
+          <a href={`${baseUrl}/prenota`} class="v2-btn v2-btn-primary">Prenota una visita</a>
         </div>
       </div>
     </div>
   </section>
 
-</BaseLayout>
+</BaseLayoutV2>
