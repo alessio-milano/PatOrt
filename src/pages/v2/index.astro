@@ -1,135 +1,195 @@
 ---
 import BaseLayoutV2 from '../../layouts/BaseLayoutV2.astro';
+
+const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
 ---
 
-<BaseLayoutV2 title="Specialista in Ortopedia e Traumatologia - Versione 2">
+<BaseLayoutV2 title="Specialista in Ortopedia e Traumatologia">
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-content">
-    <div class="hero-accent">✨ Eccellenza in Ortopedia</div>
-    <h1>Dott. Fabrizio Rivera</h1>
-    <p class="role">Ortopedia e Traumatologia · Torino</p>
-    <p class="subtitle">Direttore S.C. Ortopedia, Ospedale Cottolengo<br/>Specialista in chirurgia protesica di anca e ginocchio</p>
-    <div class="hero-cta">
-      <button class="btn btn-primary">Prenota una visita</button>
-      <button class="btn btn-secondary">Chi sono</button>
-    </div>
-  </div>
-</div>
-
-<!-- PATOLOGIE ANCA -->
-<div class="parallax-section" style="background: #FAFBFC;">
-  <div class="parallax-bg" style="background: linear-gradient(180deg, rgba(3, 105, 161, 0.03) 0%, transparent 100%);"></div>
-  <div class="section">
-    <div class="section-header">
-      <h2>Patologie dell'anca</h2>
-      <p>Soluzioni chirurgiche avanzate con risultati clinici eccellenti</p>
-    </div>
-
-    <div class="cards-container">
-      <div class="card">
-        <div class="card-icon">🦴</div>
-        <div class="card-body">
-          <div class="card-label">Anca</div>
-          <h3>La protesi d'anca</h3>
-          <p>Soluzione definitiva per la degenerazione articolare con risultati eccellenti in mobilità e qualità della vita.</p>
-          <div class="card-arrow">Scopri di più →</div>
+  <!-- HERO -->
+  <section class="v2-hero">
+    <div class="v2-container">
+      <div class="v2-hero-inner">
+        <div class="v2-hero-left">
+          <p class="v2-eyebrow">Ortopedia e Traumatologia · Torino</p>
+          <h1>Dott. Fabrizio Rivera</h1>
+          <div class="v2-credential">
+            <p>
+              <strong>Direttore S.C. Ortopedia e Traumatologia</strong>
+              Presidio Sanitario Ospedale Cottolengo · Torino<br/>
+              Specialista in chirurgia protesica di anca e ginocchio
+            </p>
+          </div>
+          <div class="v2-hero-cta">
+            <a href={`${baseUrl}/prenota`} class="v2-btn v2-btn-primary">Prenota una visita</a>
+            <a href={`${baseUrl}/chi-sono`} class="v2-btn v2-btn-secondary">Chi sono</a>
+          </div>
+          <div class="v2-quote">
+            <p>«La sua intensa attività editoriale, congressistica e il suo profilo accademico contribuiranno a garantire un ruolo sempre più centrale all'Ospedale Cottolengo nel panorama sanitario regionale.»</p>
+            <cite>Avv. Gian Paolo Zanetta · Direttore Generale, Ospedale Cottolengo</cite>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="card-icon">⚡</div>
-        <div class="card-body">
-          <div class="card-label">Anca</div>
-          <h3>Conflitto femoro-acetabolare</h3>
-          <p>Patologia causa di artrosi precoce nei pazienti giovani, trattabile con chirurgia mini-invasiva.</p>
-          <div class="card-arrow">Scopri di più →</div>
-        </div>
-      </div>
+        <div class="v2-hero-right">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:420px; display:block;" aria-hidden="true">
+            <circle cx="200" cy="200" r="170" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <circle cx="200" cy="200" r="130" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+            <circle cx="200" cy="200" r="90" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
 
-      <div class="card">
-        <div class="card-icon">💪</div>
-        <div class="card-body">
-          <div class="card-label">Anca</div>
-          <h3>Artrosi dell'anca</h3>
-          <p>Percorso terapeutico personalizzato dalle terapie conservative alla chirurgia protesica.</p>
-          <div class="card-arrow">Scopri di più →</div>
+            <line x1="60" y1="200" x2="340" y2="200" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
+            <line x1="200" y1="40" x2="200" y2="360" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
+
+            <path d="M 130 150 A 90 90 0 0 1 270 190" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M 120 175 A 100 100 0 0 1 265 230" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-linecap="round"/>
+
+            <line x1="230" y1="230" x2="270" y2="290" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+            <line x1="270" y1="290" x2="240" y2="345" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+
+            <circle cx="230" cy="230" r="42" fill="rgba(42,122,111,0.2)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+
+            <circle cx="130" cy="150" r="3" fill="rgba(255,255,255,0.2)"/>
+            <circle cx="270" cy="190" r="3" fill="rgba(255,255,255,0.2)"/>
+            <circle cx="240" cy="345" r="3" fill="rgba(255,255,255,0.2)"/>
+          </svg>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- PATOLOGIE GINOCCHIO -->
-<div class="parallax-section" style="background: white;">
-  <div class="parallax-bg" style="background: linear-gradient(180deg, transparent 0%, rgba(3, 105, 161, 0.02) 100%);"></div>
-  <div class="section">
-    <div class="section-header">
-      <h2>Patologie del ginocchio</h2>
-      <p>Trattamenti innovativi dall'artroscopia all'artroprotesi robotica</p>
-    </div>
-
-    <div class="cards-container">
-      <div class="card">
-        <div class="card-icon">🦵</div>
-        <div class="card-body">
-          <div class="card-label">Ginocchio</div>
-          <h3>La gonartrosi</h3>
-          <p>Artrosi del ginocchio con soluzioni per ogni stadio clinico, dalla conservativa alla protesi.</p>
-          <div class="card-arrow">Scopri di più →</div>
+  <!-- STATS BAR -->
+  <section class="v2-stats-bar">
+    <div class="v2-container">
+      <div class="v2-stats-grid">
+        <div>
+          <div class="v2-stat-number">25+</div>
+          <div class="v2-stat-label">Anni di esperienza</div>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🤖</div>
-        <div class="card-body">
-          <div class="card-label">Ginocchio</div>
-          <h3>Artroprotesi con ROSA</h3>
-          <p>Sostituzione articolare con sistema robotico per precisione millimetrica e risultati superiori.</p>
-          <div class="card-arrow">Scopri di più →</div>
+        <div>
+          <div class="v2-stat-number">100+</div>
+          <div class="v2-stat-label">Pubblicazioni scientifiche</div>
         </div>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🔗</div>
-        <div class="card-body">
-          <div class="card-label">Ginocchio</div>
-          <h3>Lesioni legamentose</h3>
-          <p>Ricostruzione artroscopica dei legamenti con tecniche mininvasive e recupero rapido.</p>
-          <div class="card-arrow">Scopri di più →</div>
+        <div>
+          <div class="v2-stat-number">Cottolengo 2026</div>
+          <div class="v2-stat-label">Nuovo incarico</div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<!-- STATS + CHI SONO -->
-<div class="parallax-section" style="background: #FAFBFC;">
-  <div class="parallax-bg" style="background: linear-gradient(180deg, rgba(255, 122, 69, 0.02) 0%, transparent 100%);"></div>
-  <div class="section">
-    <div class="stats-grid">
-      <div class="stat">
-        <div class="stat-number">25+</div>
-        <div class="stat-label">Anni di esperienza</div>
+  <!-- PATOLOGIE -->
+  <section class="v2-patologie-section">
+    <div class="v2-container">
+
+      <div class="v2-patologie-group">
+        <div class="v2-section-header">
+          <h2>Patologie dell'anca</h2>
+          <p>Diagnosi e trattamento chirurgico dalle prime fasi del conflitto articolare fino alla sostituzione protesica.</p>
+        </div>
+        <div class="v2-divider"></div>
+
+        <div class="v2-cards-anca">
+          <a href={`${baseUrl}/patologie/il-conflitto-femoro-acetabolare`} class="v2-card">
+            <div class="v2-card-media">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+                <rect width="400" height="280" fill="#EEE8DF" rx="4"/>
+                <rect x="2" y="2" width="396" height="276" fill="none" stroke="#C8BBA8" stroke-width="1.5" stroke-dasharray="6 4" rx="3"/>
+                <text x="200" y="130" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#9A8868">Illustrazione: Conflitto femoro-acetabolare (FAI)</text>
+                <text x="200" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#B8AA96">[SVG anatomica in arrivo]</text>
+              </svg>
+            </div>
+            <div class="v2-card-body">
+              <span class="v2-badge">Anca</span>
+              <h3>Conflitto femoro-acetabolare (FAI)</h3>
+              <p>Patologia di recente definizione, causa di artrosi precoce nei pazienti giovani, trattabile anche in artroscopia.</p>
+              <span class="v2-card-link">Approfondisci →</span>
+            </div>
+          </a>
+
+          <a href={`${baseUrl}/patologie/la-protesi-danca`} class="v2-card">
+            <div class="v2-card-media">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+                <rect width="400" height="280" fill="#EEE8DF" rx="4"/>
+                <rect x="2" y="2" width="396" height="276" fill="none" stroke="#C8BBA8" stroke-width="1.5" stroke-dasharray="6 4" rx="3"/>
+                <text x="200" y="130" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#9A8868">Illustrazione: Protesi d'anca</text>
+                <text x="200" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#B8AA96">[SVG anatomica in arrivo]</text>
+              </svg>
+            </div>
+            <div class="v2-card-body">
+              <span class="v2-badge">Anca</span>
+              <h3>La protesi d'anca</h3>
+              <p>La protesi d'anca è la soluzione chirurgica per la degenerazione avanzata dell'articolazione, con risultati eccellenti in mobilità e qualità della vita.</p>
+              <span class="v2-card-link">Approfondisci →</span>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="stat">
-        <div class="stat-number">100+</div>
-        <div class="stat-label">Pubblicazioni scientifiche</div>
+
+      <div class="v2-patologie-group">
+        <div class="v2-section-header">
+          <h2>Patologie del ginocchio</h2>
+          <p>Un percorso terapeutico personalizzato per ogni stadio della malattia artrosica.</p>
+        </div>
+        <div class="v2-divider"></div>
+
+        <div class="v2-cards-ginocchio">
+          <a href={`${baseUrl}/patologie/la-gonartrosi`} class="v2-card">
+            <div class="v2-card-media">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+                <rect width="400" height="280" fill="#EEE8DF" rx="4"/>
+                <rect x="2" y="2" width="396" height="276" fill="none" stroke="#C8BBA8" stroke-width="1.5" stroke-dasharray="6 4" rx="3"/>
+                <text x="200" y="130" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" fill="#9A8868">Illustrazione: Gonartrosi</text>
+                <text x="200" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#B8AA96">[SVG anatomica in arrivo]</text>
+              </svg>
+            </div>
+            <div class="v2-card-body">
+              <span class="v2-badge">Ginocchio</span>
+              <h3>La gonartrosi</h3>
+              <p>L'artrosi del ginocchio colpisce milioni di persone. Esistono oggi trattamenti efficaci per ogni stadio della malattia, dalla terapia conservativa alla protesi.</p>
+              <span class="v2-card-link">Approfondisci →</span>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="stat">
-        <div class="stat-number">5000+</div>
-        <div class="stat-label">Interventi chirurgici</div>
+
+    </div>
+  </section>
+
+  <!-- BIO STRIP -->
+  <section class="v2-bio-strip">
+    <div class="v2-container">
+      <div class="v2-bio-inner">
+        <div class="v2-bio-left">
+          <h2>Un percorso fondato su ricerca e pratica clinica</h2>
+          <p>
+            Laureato con lode all'Università di Torino e specializzato con lode a Siena, ho dedicato oltre 25 anni alla chirurgia ortopedica con una costante attenzione alla ricerca scientifica. Associate Editor del <em>Journal of Orthopaedics and Traumatology</em>, International Member dell'AAOS, autore di oltre 100 pubblicazioni su riviste internazionali.
+          </p>
+          <a href={`${baseUrl}/chi-sono`} class="v2-btn v2-btn-primary">Leggi il curriculum completo</a>
+        </div>
+        <div class="v2-bio-right">
+          <div class="v2-bio-stats">
+            <div class="v2-bio-stat">
+              <div class="v2-stat-number">25+</div>
+              <div class="v2-stat-label">Anni</div>
+            </div>
+            <div class="v2-bio-stat">
+              <div class="v2-stat-number">100+</div>
+              <div class="v2-stat-label">Studi</div>
+            </div>
+            <div class="v2-bio-stat">
+              <div class="v2-stat-number">5</div>
+              <div class="v2-stat-label">Società</div>
+            </div>
+          </div>
+          <div class="v2-badges">
+            <span class="v2-badge-item">AAOS International Member</span>
+            <span class="v2-badge-item">Journal of Orthopaedics — Associate Editor</span>
+            <span class="v2-badge-item">SIOT</span>
+            <span class="v2-badge-item">AIR</span>
+            <span class="v2-badge-item">Club Italiano Osteosintesi</span>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="cta-section">
-      <div class="divider"></div>
-      <h2>Percorso fondato su ricerca e pratica clinica</h2>
-      <p>Laureato con lode e specializzato con lode, ho dedicato oltre 25 anni alla chirurgia ortopedica con costante attenzione alla ricerca scientifica. Associate Editor del Journal of Orthopaedics and Traumatology, International Member dell'AAOS, autore di oltre 100 pubblicazioni.</p>
-      <button class="btn btn-primary">Leggi il curriculum completo</button>
-    </div>
-  </div>
-</div>
+  </section>
 
 </BaseLayoutV2>
